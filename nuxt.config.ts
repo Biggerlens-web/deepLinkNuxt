@@ -14,5 +14,20 @@ export default defineNuxtConfig({
     },
     devServer: {
         port: 3000
+    },
+    app: {
+        head: {
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: '/favicon.ico'
+                },
+                {
+                    rel: 'apple-touch-icon',
+                    href: '/favicon.ico'
+                }
+            ]
+        }
     }
 })
