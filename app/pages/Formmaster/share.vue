@@ -1,6 +1,7 @@
 <template>
     <div>
         <deeplinkView />
+        <openMenuMask v-if="isWeChat" />
     </div>
 </template>
 
@@ -8,12 +9,14 @@
     import { onMounted } from 'vue';
     import { useRoute } from 'vue-router';
     import deeplinkView from '@/components/deeplinkView.vue'
-
+    import openMenuMask from '@/components/openMenuMask.vue'
     const route = useRoute()
     let timeout: any = null
     const siteTarget = useRuntimeConfig().public.siteTarget
     const origin = useRequestURL().origin
+    const isWeChat = ref<boolean>(false)
 
+    isWeChat.value = typeof navigator !== 'undefined' && /MicroMessenger/i.test(navigator.userAgent)
 
     useHead({
         title: siteTarget === 'CN' ? '表格大师APP-简单快捷 高效办公' : 'Spreadsheet Editor-Simple, convenient, and efficient work',

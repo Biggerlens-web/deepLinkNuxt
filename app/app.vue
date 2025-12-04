@@ -8,5 +8,5 @@
 </template>
 
 <style lang="scss">
-@use "~/assets/css/init.scss";
+  @use "~/assets/css/init.scss";
 </style>
