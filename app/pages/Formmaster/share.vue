@@ -1,7 +1,7 @@
 <template>
     <div>
         <deeplinkView />
-        <openMenuMask v-if="isWeChat" />
+
     </div>
 </template>
 

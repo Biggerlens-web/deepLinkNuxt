@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         }
     },
     devServer: {
-        port: 3000
+        port: 3544
     },
     app: {
         head: {

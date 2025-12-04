@@ -2,7 +2,7 @@
     <div class="open_menu_mask">
         <div class="click_tips">
             <span>
-                {{ `1.${isEN ? 'Tap "..." and select "Open in default browser"' : '点击“...” 选择“用默认浏览器打开”'}` }}
+                {{ `${isEN ? '1.Tap "..."\n2.select "Open in default browser"' : '1.点击“...”\n2.选择“用默认浏览器打开”'}` }}
             </span>
             <img src="/assets/clickMenu.png" alt="">
         </div>
@@ -31,10 +31,14 @@
             right: 20px;
 
             span {
+                transform: translateY(40px);
                 font-family: PingFang SC, PingFang SC;
                 font-weight: 400;
                 font-size: 16px;
                 color: #FFFFFF;
+                white-space: pre-line;
+                line-height: 1.8;
+                display: inline-block;
             }
 
             img {
