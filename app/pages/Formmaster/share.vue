@@ -41,7 +41,7 @@
         const fullPath: string = route.fullPath
         const query: string = fullPath.split('?')[1] || ''
 
-        const appStoreLink: string = siteTarget === 'CN' ? `https://website-test.biggerlens.com/?params=${query}&platform=${platform}` : `https://photo.retouch.cc/?params=${query}&platform=${platform}`
+        const appStoreLink: string = siteTarget === 'CN' ? `https://formmaster.cn/?params=${query}&platform=${platform}` : `https://spreadsheetseditor.com/?params=${query}&platform=${platform}`
         timeout = setTimeout(() => {
             window.location.href = appStoreLink
         }, 2000)
