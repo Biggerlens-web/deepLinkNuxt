@@ -14,7 +14,10 @@
     const siteTarget = useRuntimeConfig().public.siteTarget
     const isWeChat = ref<boolean>(false)
 
-    isWeChat.value = typeof navigator !== 'undefined' && /MicroMessenger/i.test(navigator.userAgent)
+    function isThirdPartyApp(ua: string): boolean {
+        return /(MicroMessenger|MQQBrowser|QQ|Qzone|DingTalk|AlipayClient|Weibo|BaiduBoxApp|baiduboxapp|Toutiao|NewsApp|Douyin)/i.test(ua)
+    }
+    isWeChat.value = typeof navigator !== 'undefined' && isThirdPartyApp(navigator.userAgent)
 
 
     useHead({
